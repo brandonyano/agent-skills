@@ -1,6 +1,6 @@
 # Agent Skills
 
-This repository contains a collection of AI agent skills I use to extend Cursor and other agent workflows. Each skill lives in its own directory with a `SKILL.md` file and, when useful, supporting scripts or reference material.
+This repository contains a collection of AI agent skills that I've created and use. Each skill lives in its own directory with a `SKILL.md` file and, when useful, supporting scripts or reference material.
 
 ## Skills
 
@@ -27,15 +27,6 @@ This repository contains a collection of AI agent skills I use to extend Cursor 
 └── youtube-video-summarizer/
 ```
 
-## Public Repo Notes
-
-This repo is intended to be safe to publish publicly.
-
-- Do not commit API keys, tokens, credentials, customer data, private transcripts, or generated working notes.
-- Runtime secrets should come from environment variables. For example, `youtube-video-summarizer` expects `GEMINI_API_KEY` to be set locally.
-- Generated extraction outputs such as `extractions/`, `concepts/`, `chunks/`, and `*-notes.md` are ignored by Git by default.
-- Local environment files such as `.env`, virtual environments, editor settings, logs, and OS metadata are ignored by Git.
-
 ## YouTube Summarizer Setup
 
 The YouTube helper script requires Python and the Google GenAI client:
@@ -47,12 +38,3 @@ python youtube-video-summarizer/scripts/summarize_youtube.py "https://www.youtub
 ```
 
 Keep the actual key in your shell environment or a local ignored `.env` file, never in tracked files.
-
-## GitHub Publishing
-
-When ready to publish:
-
-```sh
-git remote add origin git@github.com:<your-username>/<repo-name>.git
-git push -u origin main
-```
