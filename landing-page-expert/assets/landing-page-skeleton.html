@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+  HIGH-CONVERTING LANDING PAGE SKELETON
+  ------------------------------------------------------------------
+  This is STRUCTURAL SCAFFOLDING, not a finished design. Each section maps to a
+  principle in the landing-page-expert knowledge base. Restyle per brand (use the
+  frontend-design skill for aesthetic direction) and delete sections that don't fit
+  the offer/audience. Reorder based on audience awareness:
+    - Problem-aware cold traffic  -> keep the PAS/problem section prominent and early.
+    - Solution-aware / warm       -> compress the problem build-up, surface the offer sooner.
+  Replace every [BRACKETED] placeholder. Keep the sticky CTA and per-section CTAs.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[PAGE TITLE — match the ad that drove the click]</title>
+<style>
+  :root{
+    --bg:#ffffff; --fg:#12141a; --muted:#5b606b; --line:#e7e9ee;
+    --brand:#3b5bfd; --brand-ink:#ffffff; --accent:#0fb87a;
+    --maxw:1080px; --radius:14px;
+    --font: system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font);color:var(--fg);background:var(--bg);line-height:1.55}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  section{padding:72px 0}
+  h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.08;margin:0 0 16px;letter-spacing:-.02em}
+  h2{font-size:clamp(1.5rem,3.5vw,2.25rem);line-height:1.15;margin:0 0 12px;letter-spacing:-.01em}
+  p.lead{font-size:1.2rem;color:var(--muted);margin:0 0 28px;max-width:52ch}
+  .btn{display:inline-block;background:var(--brand);color:var(--brand-ink);font-weight:700;
+       padding:16px 28px;border-radius:var(--radius);text-decoration:none;font-size:1.05rem}
+  .fud{display:block;margin-top:10px;font-size:.9rem;color:var(--muted)} /* FUD reducer under CTA */
+  .grid{display:grid;gap:24px}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .grid-2{grid-template-columns:1.1fr .9fr;align-items:center}
+  .card{border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .logos{display:flex;flex-wrap:wrap;gap:28px;align-items:center;opacity:.8}
+  .proofbar{display:flex;gap:32px;flex-wrap:wrap;color:var(--muted);font-weight:600}
+  .sticky-cta{position:sticky;bottom:0;background:var(--fg);color:#fff;padding:12px 20px;
+       display:flex;justify-content:space-between;align-items:center;gap:16px;z-index:50}
+  .sticky-cta .btn{padding:10px 18px}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+  nav a.navcta{font-weight:700;color:var(--brand);text-decoration:none}
+  @media (max-width:760px){
+    .grid-3,.grid-2{grid-template-columns:1fr}
+    section{padding:48px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV: strip to essentials on a landing page. Ideally logo + one CTA, no full menu, no off-page links. -->
+<header class="wrap">
+  <nav>
+    <strong>[LOGO]</strong>
+    <a class="navcta" href="#cta">[Primary CTA, e.g. Get Started]</a>
+  </nav>
+</header>
+
+<!-- ABOVE THE FOLD: 100% see it, ~60% never scroll. Must pass the 5-Second Clarity Test.
+     Contains: benefit headline (WIIFM), pain+solution sub-headline, CTA, social proof, FUD reducer, value-reinforcing visual. -->
+<section id="hero">
+  <div class="wrap grid grid-2">
+    <div>
+      <h1>[BENEFIT HEADLINE — the dream outcome, quantified if possible. Answers "why should I care?"]</h1>
+      <p class="lead">[SUB-HEADLINE — name the pain, then the solution. Answers "who is this for / how does it work?"]</p>
+      <a class="btn" href="#cta">[BENEFIT-DRIVEN CTA — e.g. "Get my free audit", not "Submit"]</a>
+      <span class="fud">[FUD REDUCER — e.g. "No credit card · Cancel anytime · 2-minute setup"]</span>
+      <div class="proofbar" style="margin-top:28px">
+        <span>★★★★★ [rating] from [N] reviews</span>
+        <span>[Trusted by N,000+ customers]</span>
+      </div>
+    </div>
+    <div class="card" style="aspect-ratio:4/3;display:grid;place-items:center;color:var(--muted)">
+      [HERO VISUAL — must reinforce the value prop / show the outcome. Custom graphic beats stock photo.]
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF BAND: reinforce immediately. Add a quote to logos rather than a bare logo wall. -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="logos">[LOGO] [LOGO] [LOGO] [LOGO] [LOGO]</div>
+  </div>
+</section>
+
+<!-- PROBLEM / AGITATE (PAS): scale length to offer complexity + audience awareness. Compress for solution-aware. -->
+<section style="background:#f7f8fb">
+  <div class="wrap">
+    <h2>[Name the problem the visitor feels right now]</h2>
+    <p class="lead">[Agitate: the cost of staying stuck. Use "you" language. Then transition to the solution.]</p>
+  </div>
+</section>
+
+<!-- VALUE PROPOSITION SECTIONS: 5–8 benefit-driven blocks. Each ends with a mini-CTA. -->
+<section>
+  <div class="wrap">
+    <h2>[Core value proposition, benefit-first]</h2>
+    <div class="grid grid-3" style="margin-top:24px">
+      <div class="card"><h3>[Benefit 1]</h3><p>[Feature framed as outcome]</p></div>
+      <div class="card"><h3>[Benefit 2]</h3><p>[Feature framed as outcome]</p></div>
+      <div class="card"><h3>[Benefit 3]</h3><p>[Feature framed as outcome]</p></div>
+    </div>
+    <p style="margin-top:28px"><a class="btn" href="#cta">[Section CTA]</a></p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS: 3–4 steps that make success feel easy. -->
+<section style="background:#f7f8fb">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <div class="grid grid-3" style="margin-top:24px">
+      <div class="card"><strong>1.</strong> [Step]</div>
+      <div class="card"><strong>2.</strong> [Step]</div>
+      <div class="card"><strong>3.</strong> [Step]</div>
+    </div>
+  </div>
+</section>
+
+<!-- DEEPER PROOF: testimonials matched to specific pains; before/after; video; comparison table. -->
+<section>
+  <div class="wrap">
+    <h2>[Benefit-driven proof headline, not "Testimonials"]</h2>
+    <div class="grid grid-3" style="margin-top:24px">
+      <div class="card"><p>"[Pain-capturing, specific, verifiable testimonial]"</p><small>[Name · role · photo]</small></div>
+      <div class="card"><p>"[Result with a specific number]"</p><small>[Name · company]</small></div>
+      <div class="card"><p>"[Before → after transformation]"</p><small>[Name]</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER / PRICING: build value BEFORE price. Anchor. ≤3 options with a guided "best" badge. Transparent, no hidden costs. -->
+<section id="offer" style="background:#f7f8fb">
+  <div class="wrap">
+    <h2>[Offer headline — restate the transformation, not just "Pricing"]</h2>
+    <div class="grid grid-3" style="margin-top:24px">
+      <div class="card"><h3>[Tier A]</h3><p>[price]</p></div>
+      <div class="card" style="border-color:var(--brand)"><h3>[Tier B — badge: Most popular]</h3><p>[price]</p></div>
+      <div class="card"><h3>[Tier C]</h3><p>[price]</p></div>
+    </div>
+    <p style="margin-top:20px;color:var(--muted)">[GUARANTEE — risk reversal that removes the last objection]</p>
+  </div>
+</section>
+
+<!-- FAQ: objection handlers, not trivia. Each answer removes a specific reason not to buy. -->
+<section>
+  <div class="wrap">
+    <h2>Questions, answered</h2>
+    <div class="grid" style="margin-top:16px">
+      <details class="card"><summary>[Objection as a question]</summary><p>[Answer that removes it]</p></details>
+      <details class="card"><summary>[Objection as a question]</summary><p>[Answer that removes it]</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSER: a mini above-the-fold. Restate the promise + CTA for the visitor who scrolled the whole way. -->
+<section id="cta" style="text-align:center">
+  <div class="wrap">
+    <h2>[Restate the dream outcome]</h2>
+    <p class="lead" style="margin-inline:auto">[One-line recap of the offer + risk reversal]</p>
+    <a class="btn" href="#">[Final CTA]</a>
+    <span class="fud">[FUD reducer]</span>
+  </div>
+</section>
+
+<!-- STICKY CTA: keeps the action reachable on long pages and mobile. -->
+<div class="sticky-cta">
+  <span>[One-line value recap]</span>
+  <a class="btn" href="#cta">[CTA]</a>
+</div>
+
+</body>
+</html>

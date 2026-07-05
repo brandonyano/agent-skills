@@ -5,21 +5,23 @@ This repository contains a collection of AI agent skills I use to extend Cursor 
 ## Skills
 
 - `deduplicator` - removes repeated information across one or more inputs while preserving every unique detail.
+- `copywriter` - writes, rewrites, critiques, and improves persuasive copy using a bundled copywriting reference.
 - `knowledge-extractor` - extracts reusable, standalone knowledge from source material.
 - `source-chunker` - splits long-form source material into coherent chunks for downstream extraction or RAG.
 - `youtube-video-summarizer` - summarizes or exhaustively extracts public YouTube videos through the Google Gemini API.
 - `prose-coach` - critiques, revises, and drafts nonfiction prose using a curated writing-principles reference.
 - `facebook-ads-strategist` - analyzes and plans Meta/Facebook ad account strategy using a bundled knowledge base.
-- `landing-page-expert.skill` - packaged skill for landing page critique, strategy, and conversion-focused recommendations.
+- `landing-page-expert` - audits, critiques, builds, and improves landing pages using conversion-focused references and an HTML skeleton asset.
 
 ## Repository Layout
 
 ```text
 .
+├── copywriter/
 ├── deduplicator/
 ├── facebook-ads-strategist/
 ├── knowledge-extractor/
-├── landing-page-expert.skill
+├── landing-page-expert/
 ├── prose-coach/
 ├── source-chunker/
 └── youtube-video-summarizer/
